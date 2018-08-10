@@ -1,5 +1,6 @@
-# App description
-Add your todos...
+# Why?
+- To learn ReasonML.
+- This app will transition from a simple CLI ReasonML todo-app -> React-Reason -> React-Reason-GraphQL
 
 # Build
 ```
