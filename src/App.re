@@ -17,9 +17,18 @@ type todo = {
   progress: todoProgress,
 };
 
-let someTodo: todo = {
-  description: "Some todo description",
-  progress: IN_PROGRESS,
-};
+type todos = list(todo);
 
+let someTodo: todo = {description: "Some todo description", progress: DONE};
+
+let someTodoProgress =
+  switch (someTodo.progress) {
+  | IN_PROGRESS => "In progress"
+  | DONE => "Done"
+  };
+
+let someTodos = [someTodo];
+
+Js.log(someTodoProgress);
 Js.log(someTodo);
+Js.log(someTodos);
