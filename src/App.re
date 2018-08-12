@@ -20,6 +20,7 @@ type todo = {
 type todos = list(todo);
 
 let someTodo: todo = {description: "Some todo description", progress: DONE};
+let someTodo2: todo = {description: "Some todo description [2]", progress: DONE};
 
 let someTodoProgress =
   switch (someTodo.progress) {
@@ -27,8 +28,8 @@ let someTodoProgress =
   | DONE => "Done"
   };
 
-let someTodos = [someTodo];
+let someTodos = [someTodo, someTodo2];
 
-Js.log(someTodoProgress);
+Js.log("someTodoProgress: " ++ someTodoProgress);
 Js.log(someTodo);
 Js.log(someTodos);

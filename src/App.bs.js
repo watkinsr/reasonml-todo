@@ -7,20 +7,31 @@ var someTodo = /* record */[
   /* progress : DONE */1
 ];
 
+var someTodo2 = /* record */[
+  /* description */"Some todo description [2]",
+  /* progress : DONE */1
+];
+
 var someTodoProgress = "Done";
 
-var someTodos = /* :: */[
-  someTodo,
+var someTodos_001 = /* :: */[
+  someTodo2,
   /* [] */0
 ];
 
-console.log(someTodoProgress);
+var someTodos = /* :: */[
+  someTodo,
+  someTodos_001
+];
+
+console.log("someTodoProgress: Done");
 
 console.log(someTodo);
 
 console.log(someTodos);
 
 exports.someTodo = someTodo;
+exports.someTodo2 = someTodo2;
 exports.someTodoProgress = someTodoProgress;
 exports.someTodos = someTodos;
 /*  Not a pure module */
